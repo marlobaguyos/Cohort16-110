@@ -9,26 +9,24 @@ def print_menu():
   print('[4] Divide')
   print("[q] Quit")
 
-# def sum(num1, num2):
-#   return num1 + num2
-
-# def sub(num1, num2):
-#   return num1 - num2
-
-# def mul(num1, num2):
-#   return num1 * num2
-
-# def sum(num1, num2):
-#   return num1 / num2
-
-
 # instructions
 opc = ''
 print_menu()
 opc = input("Please select an option: ")
 while(opc != 'q'):
-  num1 = float(input("Provide Num 1: "))
-  num2 = float(input("Provide Num 2: "))
+  num1 = input("Provide Num 1: ")
+  while(type(num1) != int)
+  # while(type(parse.int(num1)) == str):
+  #   print("Dude enter a number!")
+  #   num1 = input("Provide Num 1: ")
+  #   if(type(num1) != str):
+  #     break
+  num2 = input("Provide Num 2: ")
+  while(type(num2) == str):
+    print("Dude enter a number!")
+    num1 = float(input("Provide Num 1: "))
+    if(type(num2) != str):
+      break
   if(opc == '1'):
     res = num1 + num2
     print(f"Result: {res}")
