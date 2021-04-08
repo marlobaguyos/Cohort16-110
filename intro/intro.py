@@ -5,4 +5,7 @@ print("Hello World")
 # variables
 
 name = "Marlo"
-print(name)
+age = 34
+price = 123.32
+found = False
+users = []
