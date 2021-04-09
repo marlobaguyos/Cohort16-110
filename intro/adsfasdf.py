@@ -3,11 +3,11 @@ def firstNumber():
   while(num1.isdigit() != True):
     num1 = input("Try again! Please enter first number: ")
     if(num1 == 'q'):
-      break
+      return num1 == False
   else:
     num1 = float(num1)
   return num1
-  
+
 
 num1 = firstNumber()
 print(num1)
