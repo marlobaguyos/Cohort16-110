@@ -1,11 +1,9 @@
-print("Hello World")
-
-#hash Tag are comments
-
-# variables
-
-name = "Marlo"
-age = 34
-price = 123.32
-found = False
-users = []
+pogi = True
+num = float(input("Enter a Number: "))
+while(pogi == True):
+  try:
+    num = float(input("Enter a Number"))
+    print("num: ", num)
+  except ValueError:
+    print("Please input float only...")
+    continue
