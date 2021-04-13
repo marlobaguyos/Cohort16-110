@@ -7,7 +7,7 @@ class Song:
   id = 0
   title = ''
   featured_artist = ''
-  song_duration = time.time()
+  song_duration = ''
   written_by = ''
 
   def __init__(self, id, title, featured_artist, song_duration, written_by):

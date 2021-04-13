@@ -9,6 +9,7 @@ def print_menu():
   print("[1] Register a new Album")
   print("[2] Register a new Song")
   print("[3] Display Album")
+  print("[4] Print the songs inside an Album")
 
   print("[q] Quit")
 

@@ -9,6 +9,7 @@ from song import Song
 #Homework
 #declare a catalog variable (list)
 catalog = []
+album_count = 0
 
 # functions
 def release_year():
@@ -30,6 +31,7 @@ def price():
         continue
 
 def register_album():
+  global album_count
   print_header("Register a new Album")
 
   # title, genre, artist, release_year, price, album_art, related_artist, record_label = 8 total
@@ -42,7 +44,9 @@ def register_album():
   related_artist = input("Please provide Related Artist: ")
   record_label = input("Please provide Record Label: ")
 
-  the_album = Album(1, title, genre, artist, release_year, price, album_art, related_artist, record_label)
+  album_count += 1
+
+  the_album = Album(album_count, title, genre, artist, release_year, price, album_art, related_artist, record_label)
   
   # push the album into the list
   catalog.append(the_album)
@@ -50,13 +54,24 @@ def register_album():
 def print_albums():
   print_header("Albums")
   for album in catalog:
-    print(f"ID: {album.id} | Title: {album.title}")
+    print(f"ID: {album.id} | Title: {album.title} | {album.artist}")
     
 
 def register_song():
   #let the user choose an album
   print_albums()
-  album_id = input("Please choose the album Id: ")
+  album_id = int(input("Please choose the album Id: "))
+
+  #find the album with that ID
+  found = False
+  for album in catalog:
+    if(album.id == album_id):
+      found = True
+      the_album = album
+  
+  if(not found):
+    print("**Error: Wrong ID. Try again")
+    return
 
   print_header("Songs")
   title = input("Please provide Title: ")
@@ -65,6 +80,11 @@ def register_song():
   written_by = input("Please provide Writter: ")
 
   the_song = Song(1, title, featured_artist, song_duration, written_by)
+
+  the_album.add_song(the_song)
+
+  print("** Song Registered")
+  print(f"{the_song.title} | {the_song.featured_artist}")
 
 # instructions
 opc = ''
