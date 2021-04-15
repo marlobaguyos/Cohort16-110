@@ -21,6 +21,7 @@ class Album:
     self.album_art = album_art
     self.related_artist = related_artist
     self.record_label = record_label
+    self.songs = []
 
   def __str__(self):
     return self.title + "|" + self.artist

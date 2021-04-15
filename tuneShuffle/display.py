@@ -10,7 +10,10 @@ def print_menu():
   print("[2] Register a new Song")
   print("[3] Display Album")
   print("[4] Print the songs inside an Album")
-
+  print("[5] total songs")
+  print("[6] Total $ in the catalog")
+  print("[7] Most expensive Album")
+  print("[10] Change the title of a specific Album")
   print("[q] Quit")
 
 def print_header(text):
