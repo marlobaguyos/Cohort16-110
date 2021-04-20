@@ -3,8 +3,8 @@ class Album:
   title = ''
   genre = ''
   artist = ''
-  release_year = 0.0
-  price = 0.0
+  release_year = 0
+  price = 0
   album_art = ''
   related_artist = ''
   record_label = ''

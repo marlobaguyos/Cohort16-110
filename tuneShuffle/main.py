@@ -71,14 +71,12 @@ def register_album():
   title = input("Please provide Title: ")
   genre = input("Please provide Genre: ")
   artist = input("Please provide Artist Name: ")
-  release_year()
-  price()
-  album_art = input("Please provide Album Art: URL")
+  release_year = input("Please provide release_year: ")
+  price = float(input("Please provide price: "))
+  album_art = input("Please provide Album Art URL:")
   related_artist = input("Please provide Related Artist: ")
   record_label = input("Please provide Record Label: ")
-
   album_count += 1
-
   the_album = Album(album_count, title, genre, artist, release_year, price, album_art, related_artist, record_label)
   
   # push the album into the list
@@ -87,7 +85,7 @@ def register_album():
 def print_albums():
   print_header("Albums")
   for album in catalog:
-    print(f"ID: {album.id} | Title: {album.title} | {album.artist}")
+    print(f"ID: {album.id} | Title: {album.title} | {album.artist} | {album.price}")
 
 def register_song():
   #let the user choose an album
@@ -148,10 +146,12 @@ def print_album_songs():
     print("**Error: Wrong ID. Try again")
     return
 
-def total_value():
-  print_header("Total Price in Catalog")
+def total_album_price():
+  total = 0
   for album in catalog:
-    add
+    total += album.price
+  print(f'total: {total}')
+  
 
 # instructions
 deserialize_data()
@@ -180,6 +180,9 @@ while(opc != 'q' and opc != 'x'):
     count_songs()
 
   elif(opc == '6'):
-    total_value()
+    total_album_price()
+
+  elif(opc == '6'):
+    total_album_price()
 
   input("press enter to continue...")
