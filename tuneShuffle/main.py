@@ -182,7 +182,7 @@ while(opc != 'q' and opc != 'x'):
   elif(opc == '6'):
     total_album_price()
 
-  elif(opc == '6'):
-    total_album_price()
+  elif(opc == '7'):
+    expensive_album()
 
   input("press enter to continue...")
